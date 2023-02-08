@@ -1,20 +1,28 @@
 <div class="login_container">
-  <div class="input_field">
-    <input type="text" />
-    <label>*Name</label>
-  </div>
-  <div class="input_field">
-    <input type="text" />
-    <label>*Password</label>
-  </div>
+  <form class="form" data-tilt data-tilt-max="3" data-tilt-glare=true data-tilt-max-glare="0.2">
+    <div>
+      <img src="../../../assets/logo.png" alt="" />
+      <h2>PianoTick</h2>
+    </div>
+    <div class='form_container'>
+      <!-- Name -->
+      <mat-form-field appearance="outline" class="input">
+        <mat-label>
+          <span class="material-symbols-outlined"> person </span>
+          Username
+        </mat-label>
+        <input matInput placeholder="Enter your username" />
+      </mat-form-field>
 
-  <!-- <mat-form-field appearance="outline" class="input">
-    <mat-label>*Name</mat-label>
-    <input matInput placeholder="Enter your name">
-  </mat-form-field>
-  <mat-form-field appearance="outline" class="input">
-    <mat-label>*Password</mat-label>
-    <input matInput placeholder="Enter Password">
-  </mat-form-field> -->
-  <button mat-fab extended color="primary" class="login_btn">Login</button>
+      <!-- Password -->
+      <mat-form-field appearance="outline" class="input">
+        <mat-label>
+          <span class="material-symbols-outlined">lock</span>
+          Password
+        </mat-label>
+        <input matInput placeholder="Enter Password" />
+      </mat-form-field>
+      <button mat-fab extended color="primary" class="login_btn">Login</button>
+    </div>
+  </form>
 </div>
