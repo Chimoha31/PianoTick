@@ -82,6 +82,16 @@
       hsl(14deg 74% 73%) 100%
     );
   }
+  & .suggestRegister{
+    margin-top: 16px;
+    font-weight: 100;
+    font-size: 14px;
+    & a {
+      color: rgb(6, 125, 223);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
 }
 
 .login_container::before {
@@ -108,8 +118,6 @@
 .mat-mdc-form-field,
 .mat-mdc-floating-label {
   width: 250px !important;
-  // height: 70px;
-  // border: 1px solid red;
 }
 
 @media (min-width: 676px) {
@@ -119,45 +127,3 @@
     }
   }
 }
-
-//   & .input_field {
-//     position: relative;
-//     & input {
-//       border: none;
-//       border-bottom: 1px solid #fff;
-//       background-color: transparent;
-//       min-width: 250px;
-//       max-width: 360px;
-//       margin: 30px;
-//       outline: none;
-//       padding-left: 10px;
-//       padding-bottom: 4px;
-//       color: #fff;
-//       font-weight: 900;
-//       font-size: 16px;
-//     }
-//     & label {
-//       position: absolute;
-//       top: 10px;
-//       left: 30px;
-//       color: #fff;
-//       font-size: 12px;
-//       transition: 0.2s;
-//     }
-
-//     & input:focus {
-//       font-weight: 900;
-//       font-size: 16px;
-//       color: #fff;
-//       ~ label {
-//         position: absolute;
-//         top: 5px;
-//         left: 35px;
-//         display: block;
-//         transition: 0.2s;
-//         font-size: 10px;
-//         font-weight: 700;
-//         color: rgba(255, 255, 255, 0.712);
-//       }
-//     }
-//   }
