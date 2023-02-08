@@ -1,0 +1,73 @@
+.login_container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    45deg,
+    hsl(296deg 24% 50%) 0%,
+    hsl(314deg 28% 53%) 18%,
+    hsl(326deg 35% 56%) 32%,
+    hsl(335deg 40% 60%) 43%,
+    hsl(344deg 45% 62%) 51%,
+    hsl(352deg 48% 65%) 58%,
+    hsl(356deg 52% 68%) 65%,
+    hsl(1deg 57% 70%) 71%,
+    hsl(6deg 63% 71%) 78%,
+    hsl(10deg 68% 72%) 87%,
+    hsl(14deg 74% 73%) 100%
+  );
+
+  & .input_field {
+    position: relative;
+    & input {
+      border: none;
+      border-bottom: 1px solid #fff;
+      background-color: transparent;
+      min-width: 250px;
+      max-width: 360px;
+      margin: 30px;
+      outline: none;
+      padding-left: 10px;
+      padding-bottom: 4px;
+      color: #fff;
+      font-weight: 900;
+      font-size: 16px;
+    }
+    & label {
+      position: absolute;
+      top: 10px;
+      left: 30px;
+      color: #fff;
+      font-size: 12px;
+      transition: 0.2s;
+    }
+    
+    & input:focus {
+      font-weight: 900;
+      font-size: 16px;
+      color: #fff;
+      ~ label {
+        position: absolute;
+        top: 5px;
+        left: 35px;
+        display: block;
+        transition: 0.2s;
+        font-size: 10px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.712);
+      }
+    }
+  }
+}
+
+.mat-mdc-form-field, .mat-mdc-floating-label {
+  width: 250px !important;
+}
+
+.login_btn {
+  width: 250px !important;
+  height: 38px !important;
+  margin-top: 10px;
+}
