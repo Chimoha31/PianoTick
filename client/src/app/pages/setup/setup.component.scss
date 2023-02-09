@@ -2,17 +2,40 @@
   height: 100vh;
   width: 100%;
   background-image: url("../../../assets/setupBg.jpg");
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.5);
   background-blend-mode: lighten;
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
   & .select_container {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
+
+    & .select {
+      width: 100%;
+      & span {
+        display: inline-block;
+        color:rgb(90, 90, 90);
+        font-size: smaller;
+        width: 100%;
+        text-align: start;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+@media (min-width: 676px) {
+  .setup_container {
+    & .select_container {
+      flex-direction: row;
+    }
   }
 }
