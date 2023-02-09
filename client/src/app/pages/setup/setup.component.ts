@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class SetupComponent {
 
+  onStart() {
+    console.log("Start btn clicked!")
+  }
 }
