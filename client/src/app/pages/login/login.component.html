@@ -29,7 +29,11 @@
         <input matInput placeholder="Enter Password" />
       </mat-form-field>
       <button mat-fab extended color="primary" class="login_btn">Login</button>
-      <p class="suggestRegister">Don't have an account yet? <a>Register</a></p>
+      <p class="suggestRegister">
+        Don't have an account yet? &nbsp;<a (click)="onToRegister()"
+          >Register</a
+        >
+      </p>
     </div>
   </form>
 </div>

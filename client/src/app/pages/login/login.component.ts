@@ -13,4 +13,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     VanillaTilt.init(document.querySelector('.form') as any);
   }
+
+  onToRegister(){
+    console.log("Register btn clicked!")
+  }
 }

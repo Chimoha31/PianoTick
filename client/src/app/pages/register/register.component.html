@@ -1,1 +1,39 @@
-<p>register works!</p>
+<div class="register_container">
+  <form
+    class="form"
+    data-tilt
+    data-tilt-max="3"
+    data-tilt-glare="true"
+    data-tilt-max-glare="0.2"
+  >
+    <div>
+      <img src="../../../assets/logo.png" alt="" />
+      <h2>PianoTick</h2>
+    </div>
+    <div class="form_container">
+      <!-- Name -->
+      <mat-form-field appearance="outline" class="input">
+        <mat-label>
+          <span class="material-symbols-outlined"> person </span>
+          Username
+        </mat-label>
+        <input matInput placeholder="Enter your username" />
+      </mat-form-field>
+
+      <!-- Password -->
+      <mat-form-field appearance="outline" class="input">
+        <mat-label>
+          <span class="material-symbols-outlined">lock</span>
+          Password
+        </mat-label>
+        <input matInput placeholder="Enter Password" />
+      </mat-form-field>
+      <button mat-fab extended color="primary" class="register_btn">
+        Register
+      </button>
+      <p class="suggestRegister">
+        Already have an account?&nbsp; <a (click)="onToLogin()">Login</a>
+      </p>
+    </div>
+  </form>
+</div>
