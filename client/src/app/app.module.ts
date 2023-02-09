@@ -14,6 +14,8 @@ import { MatInputModule } from '@angular/material/input';
 // import { FormControl, Validators } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { HeaderComponent } from './components/header/header.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { MatButtonModule } from '@angular/material/button';
     RegisterComponent,
     SetupComponent,
     MainComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
