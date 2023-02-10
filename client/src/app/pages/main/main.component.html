@@ -1,20 +1,30 @@
 <div class="main_container">
   <app-header></app-header>
   <div class="main">
+    <!-- Date & timer -->
     <div class="date_timer">
-      <div class="date">
-        Date:
-        <strong>Mon Feb 06 2023</strong>
+      <div>
+        <div class="date">
+          Date:
+          <strong>Mon Feb 06 2023</strong>
+        </div>
+        <div class="timer">
+          <span class="material-symbols-outlined"> timer </span>
+          <strong>00:00:32</strong>
+          <span class="material-symbols-outlined play"> play_circle </span>
+          <!-- <span class="material-symbols-outlined stop_play"> stop_circle </span> -->
+        </div>
       </div>
-      <div class="timer">
-        <span class="material-symbols-outlined"> timer </span>
-        <strong>00:00:32</strong>
+
+      <div class='image'>
+        <img src="../../../assets/metronome.png" alt="metronome" />
+        <!-- <img src="../../../assets/playSound.png" alt="sound" /> -->
       </div>
     </div>
-    <!-- Date & timer -->
 
     <!-- main -->
     <div class="box_container">
+      <div class="disabled_overlay"></div>
       <div class="boxes">
         <div class="box">1</div>
         <div class="box">2</div>
