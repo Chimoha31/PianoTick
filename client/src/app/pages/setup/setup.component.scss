@@ -2,14 +2,17 @@
   height: 100vh;
   width: 100%;
   background-image: url("../../../assets/setupBg.jpg");
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.55);
   background-blend-mode: lighten;
   background-size: cover;
   background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0 20px;
+  & .setup {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   & .select_container {
     position: relative;
     width: 100%;
@@ -23,14 +26,13 @@
       width: 100%;
       & span {
         display: inline-block;
-        color:rgb(90, 90, 90);
+        color: rgb(90, 90, 90);
         font-size: smaller;
         width: 100%;
         text-align: start;
         margin-bottom: 5px;
       }
     }
-
     & button {
       margin-top: 25px;
       width: 100%;
@@ -48,7 +50,8 @@
         bottom: -80px;
         right: 0px;
         padding: 8px 40px;
-        box-shadow: rgba(0, 0, 0, 0.26) 0px 1px 5px, rgba(0, 0, 0, 0.431) 1px 1px 2px;
+        box-shadow: rgba(0, 0, 0, 0.26) 0px 1px 5px,
+          rgba(0, 0, 0, 0.431) 1px 1px 2px;
       }
     }
   }
