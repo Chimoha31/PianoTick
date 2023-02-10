@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
-title="Hello main"
+
+  onTimer() {
+    console.log("Clicked Timer")
+  }
+  onMetronome() {
+    console.log("Clicked Metronome")
+  }
+  onDone() {
+    console.log("Clicked Done btn")
+  }
 }

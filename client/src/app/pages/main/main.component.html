@@ -11,13 +11,19 @@
         <div class="timer">
           <span class="material-symbols-outlined"> timer </span>
           <strong>00:00:32</strong>
-          <span class="material-symbols-outlined play"> play_circle </span>
+          <span class="material-symbols-outlined play" (click)="onTimer()">
+            play_circle
+          </span>
           <!-- <span class="material-symbols-outlined stop_play"> stop_circle </span> -->
         </div>
       </div>
 
-      <div class='image'>
-        <img src="../../../assets/metronome.png" alt="metronome" />
+      <div class="image">
+        <img
+          src="../../../assets/metronome.png"
+          alt="metronome"
+          (click)="onMetronome()"
+        />
         <!-- <img src="../../../assets/playSound.png" alt="sound" /> -->
       </div>
     </div>
@@ -67,8 +73,10 @@
       </div>
     </div>
   </div>
-  <!-- Done button -->
+
+  <!-- Done & back to setup button -->
   <div class="done_btn">
-    <button type="button" class="btn btn-primary">Done !</button>
+    <button type="button" class="btn btn-primary" (click)="onDone()">Done !</button>
+    <!-- <button type="button" class="btn btn-primary">Back to setup</button> -->
   </div>
 </div>
