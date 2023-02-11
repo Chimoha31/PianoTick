@@ -28,7 +28,15 @@
         </mat-label>
         <input matInput placeholder="Enter Password" />
       </mat-form-field>
-      <button mat-fab extended color="primary" class="login_btn">Login</button>
+      <button
+        mat-fab
+        extended
+        color="primary"
+        class="login_btn"
+        (click)="loginUser()"
+      >
+        Login
+      </button>
       <p class="suggestRegister">
         Don't have an account yet? &nbsp;
         <a routerLink="/register">Register</a>

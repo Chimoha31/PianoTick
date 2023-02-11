@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-setup',
   templateUrl: './setup.component.html',
-  styleUrls: ['./setup.component.scss']
+  styleUrls: ['./setup.component.scss'],
 })
 export class SetupComponent {
+  constructor(private _router: Router) {}
 
-  onStart() {
-    console.log("Start btn clicked!")
+  onStartPractice(){
+    this._router.navigate(['/main']);
   }
 }
