@@ -10,8 +10,4 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     VanillaTilt.init(document.querySelector('.form') as any);
   }
-
-  onToLogin() {
-    console.log('Clicked!');
-  }
 }
