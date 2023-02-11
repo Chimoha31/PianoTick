@@ -17,7 +17,12 @@
           <span class="material-symbols-outlined"> person </span>
           Username
         </mat-label>
-        <input matInput placeholder="Enter your username" />
+        <input
+          type="text"
+          matInput
+          placeholder="Enter your username"
+          required
+        />
       </mat-form-field>
 
       <!-- Password -->
@@ -26,7 +31,13 @@
           <span class="material-symbols-outlined">lock</span>
           Password
         </mat-label>
-        <input matInput placeholder="Enter Password" />
+        <input
+          type="password"
+          autocomplete="password"
+          matInput
+          placeholder="Enter Password"
+          required
+        />
       </mat-form-field>
       <button mat-fab extended color="primary" class="register_btn">
         Register
