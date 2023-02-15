@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import VanillaTilt from 'vanilla-tilt';
 import { Router } from '@angular/router';
-// import {FormControl, Validators} from '@angular/forms';
-// import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { AuthService } from '../../service/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,13 +10,26 @@ import { Router } from '@angular/router';
 })
 
 export class LoginComponent implements OnInit {
-  constructor(private _router: Router){}
+  loginUserData = {
+    username: '',
+    password: '',
+  };
+
+  constructor(private _router: Router, private _auth: AuthService) {}
 
   ngOnInit(): void {
     VanillaTilt.init(document.querySelector('.form') as any);
   }
 
   loginUser() {
-    this._router.navigate(['/setup']);
+    this._auth.loginUser(this.loginUserData).subscribe(
+      (res: any) => {
+        sessionStorage.setItem('token', res.token);
+        this._router.navigate(['/setup']);
+      },
+      (err: any) => {
+        console.log(err);
+      }
+    );
   }
 }

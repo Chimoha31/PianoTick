@@ -5,12 +5,14 @@ import {RegisterComponent} from '../app/pages/register/register.component';
 import {SetupComponent} from '../app/pages/setup/setup.component';
 import {MainComponent} from '../app/pages/main/main.component';
 
+import {AuthGuard} from './guards/auth.guard';
+
 const routes: Routes = [
   {path: '', redirectTo: "/login", pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'setup', component: SetupComponent},
-  {path: 'main', component: MainComponent},
+  {path: 'setup', component: SetupComponent, canActivate:[AuthGuard]},
+  {path: 'main', component: MainComponent, canActivate:[AuthGuard]},
 ];
 
 @NgModule({
