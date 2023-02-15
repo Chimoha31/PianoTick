@@ -2,14 +2,16 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
+const bodyParser = require('body-parser');
 require("dotenv").config();
 const PORT = 5000;
 const user = require("./routes/user");
 
-// app.get("/", (eq, res) => {
+// app.get("/", (req, res) => {
 //   res.send("Hello server");
 // });
 
+app.use(bodyParser.json());
 app.use(cors());
 
 // Connect MongoDB
@@ -23,7 +25,7 @@ mongoose
   });
 
 // api
-app.use("/api", user);
+app.use("/pianotick", user);
 
 app.listen(PORT, () => {
   console.log("Server is running on PORT " + PORT + "🌍");
