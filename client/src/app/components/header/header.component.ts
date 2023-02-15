@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   constructor(private _router: Router) {}
 
-  onLogout() {
+  logOut() {
+    sessionStorage.removeItem('token');
     this._router.navigate(['/login']);
   }
 }

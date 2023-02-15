@@ -19,9 +19,11 @@
         </mat-label>
         <input
           type="text"
+          name="username"
           matInput
           placeholder="Enter your username"
           required
+          [(ngModel)]="registerUserData.username"
         />
       </mat-form-field>
 
@@ -33,13 +35,15 @@
         </mat-label>
         <input
           type="password"
+          name="password"
           autocomplete="password"
           matInput
           placeholder="Enter Password"
           required
+          [(ngModel)]="registerUserData.password"
         />
       </mat-form-field>
-      <button mat-fab extended color="primary" class="register_btn">
+      <button mat-fab extended color="primary" class="register_btn" (click)="registerUser()">
         Register
       </button>
       <p class="suggestRegister">
